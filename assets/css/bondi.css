@@ -1,0 +1,318 @@
+/*--------------------------------------------------------------------------------*/
+/*
+  
+  * This is the style sheet for the HTML document written in HTML5(Using Bootstrap ToolKit).
+  * It contains selectors, properties and values which are used to control the layout and appearance of web page.
+          content of Style file:-
+           1- Reset All Element Style & Setup basic.
+            2- Colors' Definition .
+              3- Common Classes Style Section.
+                4- Navbar Section.
+                  5- Landing Section.
+                    6- Feature Section.
+                      7- Our-Work Section.
+                        8- Stuff Section.
+                          9- Team Section.
+                            10- Project Section.
+                              11- Blog Section.
+                                12- Subscribe Section.
+                                 13- Footer Section.
+
+*/
+/*---------------------------------------------------------------------------------------*/
+
+/*====================================Start Reset All Element Style &  Setup basic =========================================*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*============================================== End Reset All Element Style & Setup basic =============================================*/
+/*================================================== Start Colors' Definition ===================================================*/
+
+
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --green-color-75: rgb(51 209 204 / 76%);
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+  --white-color: #ffffff;
+}
+
+/*============================================== End Color' Definition ================================================*/
+/*============================================== Start  Common Classes Style  =============================================*/
+
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: .5rem 1rem;
+}
+
+.main-btn:hover {
+  border: var(--red-color) solid 1px;
+  color: var(--yellow-color);
+}
+
+.main-title::after {
+  content: '';
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+}
+
+/*============================================== End Common Classes Style  ================================================*/
+/*============================================== Start Navbar Section ================================================*/
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--white-color);
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+
+  color: #395a8b;
+  border: 1px solid #395a8b;
+  font-size: 1.6rem;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border: 1px solid var(--green-color);
+  color: var(--green-color);
+}
+
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+
+.navbar .search svg {
+  color: var(--green-color);
+}
+
+
+/*============================================== End Navbar Section ================================================*/
+/*============================================== Start Landing Section ================================================*/
+.landing {
+  width: 100%;
+  min-height: calc(100vh - 72px);
+  background-color: var(--dark-color);
+}
+
+
+/*==============================================  End Landing Section ================================================*/
+/*============================================== Start Feature Section ================================================*/
+.features .icon-holder {
+  height: 200px;
+}
+
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+
+/*============================================== End Feature Section ================================================*/
+/*============================================== Start Our-Work Section ================================================*/
+.our-work {
+  background-color: var(--section-color)
+}
+
+.our-work ul .active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+
+
+.our-work ul li {
+  padding: .5rem 1rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+
+.our-work .box {
+  overflow: hidden;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: var(--green-color-75);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--white-color);
+  transition: all .3s ease-in-out;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 10px));
+}
+
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+
+/*============================================== End Our-Work Section ================================================*/
+/*============================================== Start Stuff Section ================================================*/
+
+.stuff .description {
+  max-width: 500px;
+}
+
+
+/*============================================== End Stuff Section ==================================================*/
+/*============================================== Start Team Section =====================================*/
+.team {
+  background-color: var(--section-color);
+}
+
+.team h2 {
+  color: var(--yellow-color);
+}
+
+.team .box h4 {
+  background-color: var(--green-color);
+}
+
+
+/*============================================== End Team Section ================================================*/
+/*==============================================Start Project Section ================================================*/
+.project {
+  background-color: var(--dark-color);
+}
+
+/*============================================== End Project Section ================================================*/
+/*============================================== Start Blog Section ================================================*/
+.card {
+  border: none;
+}
+
+/*==============================================End Blog Section ================================================*/
+/*============================================== Start Subscribe Section ================================================*/
+.subscribe {
+  background-color: var(--yellow-color);
+}
+
+form input[type="text"] {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--white-color);
+}
+
+form input[type="text"]:focus {
+  outline: none;
+}
+
+form input[type="text"]::placeholder {
+  color: var(--white-color);
+}
+
+form input[type="submit"] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+
+/*============================================== End Subscribe Section ================================================*/
+/*============================================== Start Footer Section ================================================*/
+footer {
+  background-color: var(--dark-color);
+}
+
+.copyright p>span {
+  color: var(--green-color);
+}
+
+.copyright h5>span {
+  color: var(--yellow-color);
+}
+
+.links ul li a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.links li a::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: var(--yellow-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scale(0);
+  transform-origin: left;
+  transition: all .3s ease-in-out;
+}
+
+.links ul li a:hover::after {
+  transform: scale(1);
+  transition: all .3s ease-in-out;
+}
+
+footer .icons li a svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+footer .icons li a svg.facebook {
+  background-color: #1877f2;
+}
+
+footer .icons li a svg.google-plus {
+  background-color: #dd4b39;
+}
+
+footer .icons li a svg.twitter {
+  background-color: #1da1f2;
+}
+
+footer .icons li a svg.linkedIn {
+  background-color: #0a66c2;
+}
+
+/*============================================== End Footer Section ================================================*/
