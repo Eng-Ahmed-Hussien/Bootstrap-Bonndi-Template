@@ -10,7 +10,6 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="./Readme-img/Mobile.jpeg" alt="Mobile-project-screenshot" width="100%" height="auto/">
 <img src="./Readme-img/Desktop.jpeg" alt="Desktop-project-screenshot" width="100%" height="auto/">
 
   
